@@ -9,3 +9,14 @@
 ## GSAP
 
 - [Plugin:GSAP](http://scrollmagic.io/docs/animation.GSAP.html)
+
+## SCSS
+
+~~~bash
+$ npm install -g sass
+$ npx sass index.scss:index.css
+~~~
+
+~~~bash
+$ npx sass --watch index.scss:index.css
+~~~
