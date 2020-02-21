@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    font-family: Raleway;
+    font-size: 16pt;
+    text-align: center;
+    background: whitesmoke;
+}
+
+.title {
+    margin-bottom: 10px;
+}
+
+.sub-title {
+    color: gray;
+    font-size: 1em;
+    margin-top: 0;
+}
+
+.photo {
+    display: block;
+    margin: 30vh auto;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.3);
+    background: #eee;
+    border: solid 40px #FFF;
+    opacity: 0;
+    -webkit-transition: opacity .35s linear;
+    transition: opacity .35s linear;
+}
+
+.photo[data-scroll="in"] {
+    opacity: 1;
+    -webkit-transition-duration: 1s;
+    /* transition-duration: 1s; */
+    transition-duration: 2s;
+}
