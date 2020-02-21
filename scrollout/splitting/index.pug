@@ -1,0 +1,25 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device.width,initial-scale=1')
+    script(src='//unpkg.com/splitting/dist/splitting.js')
+    script(src='//unpkg.com/scroll-out/dist/scroll-out.min.js')
+    link(rel='stylesheet' type='text/css' href='index.css')
+    script(src='index.js' defer)
+    title ScroolOut
+  body
+    .container
+      .page
+        .text 
+          p 
+            a(href='https://codepen.io/jh3y/pen/vzqVWa') Scroll for cascading text effects!
+          ul
+            li 
+              a(href='https://scroll-out.github.io/') ScrollOut
+            li 
+              a(href='https://splitting.js.org/') Spliting.js
+        - const effects = ['random', 'enter', 'swapsies', 'fading', 'flipping', 'slide', 'karaoke', 'spinning', 'filling', 'blocks', 'scaling', 'turning', 'folding', 'bulge', 'tumbling', 'rolling', 'perspective', 'zipping', 'swinging', 'bubbling', 'blowing', 'meeting', 'conveyor']
+      each val in effects
+        .page
+          .text(data-scroll='out' data-splitting='', class=`text--${val}`)= `${val.charAt(0).toUpperCase()}${val.substr(1)}`
